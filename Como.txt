@@ -1,3 +1,4 @@
+
 ionic start   Crear app
 
 ionic g component components/header
