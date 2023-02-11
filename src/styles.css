@@ -1,0 +1,15 @@
+h1#b {
+    display: inline;
+    font-weight: 700;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+.elementor-element-68bd25b{ display:none}
+form{ display:none}
+.elementor-hidden-phone{ display:none}
+.myhomepage a{
+    color: black;
+    cursor: text;
+    pointer-events: none;
+    text-decoration: none;
+  }

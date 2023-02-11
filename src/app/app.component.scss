@@ -1,0 +1,34 @@
+@keyframes cf3FadeInOut {
+    0% {
+        transition: 0.5s;
+        transform: translateY(100%);
+        opacity: 5;
+    }
+
+    100% {
+        transition: 0.5s;
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+
+
+#divfather {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    width: 100%;
+    background-color: rgb(28, 28, 28);
+}
+
+#imgsplash {
+    position: absolute;
+    top: 21%;
+    animation-name: cf3FadeInOut;
+    animation-duration: 1s;
+    width: 150px;
+}

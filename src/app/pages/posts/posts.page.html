@@ -1,0 +1,13 @@
+<app-header titulo="Posts by categorie"></app-header>
+<ion-content class="ion-padding">
+  <div *ngFor="let categorie of categories; let i= index " class="w-auto">
+  
+        <div>
+        <h1 routerLink="../../post/{{categorie['slug']}}">{{i+1}}) {{categorie['title']['rendered'] | sanitizeHtml}}</h1>
+        </div>
+        <div routerLink="../../post/{{categorie['slug']}}" [innerHTML]="categorie['content']['rendered'] | sanitizeHtml"></div>
+        <div>&nbsp;</div>
+</div>
+<ion-content>
+<app-footer></app-footer>
+

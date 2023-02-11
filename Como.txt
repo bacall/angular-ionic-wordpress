@@ -1,0 +1,56 @@
+ionic start   Crear app
+
+ionic g component components/header
+ionic g component components/footer
+
+ionic g page pages/home
+
+
+ionic g module components
+
+me genera components/components.module.ts y llenar con:
+ 
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HeaderComponent } from './header/header.component';
+import { IonicModule } from '@ionic/angular';
+import { FooterComponent } from './footer/footer.component';
+
+
+@NgModule({
+  declarations: [HeaderComponent, FooterComponent],
+  imports: [
+    CommonModule,
+    IonicModule
+  ],
+  exports:[
+    HeaderComponent,
+    FooterComponent,
+  ]
+})
+export class ComponentsModule { }
+
+
+En app/app.module.ts
+ import { ComponentsModule } from './components/components.module'; y añadir en imports  ComponentsModule
+
+
+En header.component.html poner
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Header</ion-title>
+  </ion-toolbar>
+</ion-header>
+y dejar el app.component.html
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>
+
+En header.component.ts poner
+export class HeaderComponent implements OnInit {
+  @Input() titulo!: string;
+  constructor() { }
+
+  ngOnInit() {}
+
+}

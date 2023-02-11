@@ -1,0 +1,12 @@
+<app-header titulo="Post by slug"></app-header>
+
+<ion-content class="ion-padding">
+<div *ngFor="let post of post; let i= index " class="w-auto">
+  
+  
+  <div [innerHTML]="post['content']['rendered'] | sanitizeHtml"></div>
+  <div>&nbsp;</div>
+  </div>
+</ion-content>
+
+<app-footer></app-footer>
